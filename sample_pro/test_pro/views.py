@@ -9,7 +9,7 @@ def additionView(r):
     #incoming = r.POST
     incoming = json.loads(r.body)
     print(incoming)
-    out = int(incoming['x']) - int(incoming['y'])
+    out = int(incoming['x']) * int(incoming['y'])
     data = {'result':out}
     return JsonResponse(data)
 
